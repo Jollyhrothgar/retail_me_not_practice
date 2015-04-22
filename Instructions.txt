@@ -1,0 +1,13 @@
+Http Access Log Sample from retailmenot.com: https://db.tt/dv8Z2wbv
+
+1. Clicks out from retailmenot.com to a merchant are important to us. They can be found in the logs by looking for GET requests to /out/{couponId}. Provide descriptive statistics about the number of clicks we see per minute. Specifically, calculate the minimum, maximum, mean, median and standard deviation of clicks out per minute. For minimum and maximum, also compute the minute when the value occurred. Generate a csv file of the that contains this statistics.
+
+2. Much of our traffic is a GET request to a store page. Store pages are denoted in the log by a GET request to /view*/{store domain} where * is either empty or any integer value. Examples of this path pattern are /view14/bestbuy.com and /view/gap.com. Calculate the Bounce Rate for each store page. You can assume visitors are uniquely identified by their IP. You can consider the 1 hour of weblogs as a single session, i.e. any user who visited a single page in the logs should be considered a bounce.
+
+See: wikipedia.org/wiki/Bounce_rate. "A bounce occurs when a web site visitor only views a single page on a website, that is, the visitor leaves a site without visiting any other pages before a specified session ­timeout occurs. There is no industry standard minimum or maximum time by which a visitor must leave in order for a bounce to occur. Rather, this is determined by the session timeout of the analytics tracking software.
+
+Rb = Tv / Te 
+where 
+Rb = Bounce rate 
+Tv = Total number of visitors viewing one page only 
+Te = Total entries to page
